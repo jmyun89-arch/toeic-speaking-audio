@@ -8,7 +8,7 @@ VOICE = "en-US-JennyNeural"
 RATES = (("normal", "+0%"), ("slow", "-25%"))
 
 async def main():
-    data = json.loads(Path("scripts/day2_payload.json").read_text(encoding="utf-8"))
+    data = json.loads(Path("scripts/day3_payload.json").read_text(encoding="utf-8"))
     out = Path("audio")
     out.mkdir(exist_ok=True)
     for name, text in data["items"].items():
