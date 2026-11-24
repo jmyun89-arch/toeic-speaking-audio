@@ -1,4 +1,4 @@
-"""Generate original Day 1 TOEIC Speaking audio from checked-in lesson data."""
+"""Generate original Day 5 TOEIC Speaking audio from checked-in lesson data."""
 import asyncio
 import json
 from pathlib import Path
@@ -8,7 +8,7 @@ VOICE = "en-US-JennyNeural"
 RATES = (("normal", "+0%"), ("slow", "-25%"))
 
 async def main():
-    data = json.loads(Path("scripts/day4_payload.json").read_text(encoding="utf-8"))
+    data = json.loads(Path("scripts/day5_payload.json").read_text(encoding="utf-8"))
     out = Path("audio")
     out.mkdir(exist_ok=True)
     for name, text in data["items"].items():
